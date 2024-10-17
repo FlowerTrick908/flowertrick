@@ -1,0 +1,122 @@
+/* Basic Reset */
+body, h1, p, img, footer {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+/* Universal styling */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    max-width: 100vw; /* Prevent horizontal scrolling */
+    overflow-x: hidden; /* Hide any accidental horizontal overflow */
+    overflow-y: hidden; /* Prevent vertical scrolling */
+    color: #fff;
+    background-color: #333; /* Default to dark mode */
+    padding: 20px; /* Ensures content doesn't touch the edges */
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        color: #333;
+        background-color: #f4f4f4;
+    }
+}
+
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 32px; /* Increased font size */
+    margin-top: 20px; /* Reduced top margin */
+    margin-bottom: 10px; /* Reduced bottom margin for closer proximity to image */
+}
+
+p {
+    font-size: 24px; /* Increased font size for better readability */
+    margin-bottom: 30px; /* Slightly reduced to keep elements closer */
+}
+
+.button.invite {
+    background: #5865F2; /* Discord primary button color */
+    color: #fff;
+    padding: 20px 40px; /* More substantial buttons for better interaction */
+    text-decoration: none;
+    font-size: 22px; /* Larger font size for buttons */
+    border-radius: 10px;
+    transition: transform 0.2s ease-out;
+}
+
+.button.invite:hover {
+    transform: translateY(-5px); /* Enhanced hover effect */
+}
+
+.bot-image {
+    width: 150px; /* Increased image size */
+    height: auto;
+    margin-bottom: 15px; /* Reduced margin for closer alignment to text */
+    cursor: pointer;
+    transition: transform 0.1s ease-out;
+}
+
+.image-container:active .bot-image {
+    transform: translateY(5px); /* Interaction effect when clicked */
+}
+
+footer {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    position: absolute; /* Ensures footer is always at the bottom */
+    bottom: 0;
+    background-color: #333;
+    color: #ccc;
+}
+
+.footer-link {
+    color: inherit;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .container {
+        margin-top: 10px; /* Ensure content is centered */
+        margin-bottom: 10px; /* Enough space for the footer */
+        padding: 0; /* No additional padding */
+    }
+    
+    .bot-image {
+        width: 120px; /* Smaller image size for mobile */
+        margin-bottom: 20px; /* Adjusted for mobile spacing */
+    }
+
+    body {
+        justify-content: center; /* Centers content vertically on mobile */
+        min-height: 100vh; /* Full screen height without causing scroll */
+        padding-bottom: 60px; /* Space for the footer */
+    }
+
+    footer {
+        position: fixed; /* Fixed footer on mobile for accessibility */
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px 0; /* Adjust padding as necessary */
+    }
+}
